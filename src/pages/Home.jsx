@@ -3,10 +3,15 @@ import Navbar from '../Components/Navbar'
 import Banner from '../Components/Banner'
 import Card from '../Components/Card'
 import Footer from '../Components/Footer'
+import { Link } from 'react-router-dom'
+// import { useUserAuth } from '../context/UserAuthContext'
 
 const Home = () => {
+  // const {user}=useUserAuth();
+  // console.log(user);
   return (
     <>
+
       <Navbar/>
       <Banner/>
       <div className='m-4'>
@@ -43,7 +48,7 @@ const Home = () => {
         </div>
       </div>
       <div className='flex items-center justify-center m-4'>
-        <span className='border-solid border-2 border-black p-2 bg-orange-600 text-white cursor-pointer hover:text-[1.09em] transition-all duration-200 ease-out '>Explore All categories</span> 
+        <Link to="/products" className='border-solid border-2 border-black p-2 bg-orange-600 text-white cursor-pointer hover:text-[1.09em] transition-all duration-200 ease-out '>Explore All categories</Link> 
       </div>
       <Footer/>
     </>
